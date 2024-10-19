@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Post Grotesk;
+    src: url(/sfsites/c/resource/Post_Grotesk);
+}
+
+:host {
+    /* Colors */
+    --Enercare-Red: #F6323E;
+    --Enercare-Blue: #B9D9EC;
+    --Enercare-Beige: #F5F2F2;
+    --Enercare-Cool: #B3B1B1;
+    --Enercare-Dark-Cool: #646469;
+    --Enercare-Black: #000000;
+    --Enercare-White: #FFFFFF;
+    --Default-Black: #181818;
+
+    /* Sizes */
+    --Size-0px: 0px;
+    --Size-8px: 8px;
+    --Size-16px: 16px;
+    --Size-24px: 24px;
+    --Size-32px: 32px;
+    --Size-40px: 40px;
+    --Size-48px: 48px;
+    --Size-56px: 56px;
+    --Size-64px: 64px;
+    --Size-72px: 72px;
+    --Padding-0px: 0px;
+    --Padding-8px: 8px;
+    --Padding-16px: 16px;
+    --Padding-24px: 24px;
+    --Padding-32px: 32px;
+    --Padding-40px: 40px;
+    --Padding-48px: 48px;
+    --Padding-56px: 56px;
+    --Padding-64px: 64px;
+    --Padding-72px: 72px;
+
+
+    /* Z-Index */
+    --layer-1: 1;
+    --layer-2: 2;
+    --layer-3: 3;
+    --layer-4: 4;
+    --layer-5: 5;
+    --layer-important: 2147483647;
+}

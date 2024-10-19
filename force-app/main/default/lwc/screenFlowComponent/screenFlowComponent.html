@@ -1,0 +1,41 @@
+<template>
+    
+        <h1>Move & Contact details</h1>
+        
+        <p>Do you own or rent the property you're moving out from?</p>
+
+        <div class="checkbox-container">
+            <template for:each={options} for:item="option">
+                <div key={option.value} class="checkbox">
+                    <input type="checkbox" id={option.value} value={option.value} checked={option.checked} onchange={handleCheckboxChange} />
+                    <label class="checkbox-label" for={option.value}>{option.label}</label>
+                </div>
+            </template>
+        </div>
+        <p style="font-size: large;">To | Move to address</p>
+        <p>The address of the property you are moving into</p>
+        <lightning-input-address
+        street-label="Street address" city-label="city" province-label="province" postal-code-label="postal code" country-label="country"
+        street={address.street}
+        city={address.city}
+        province={address.state}
+        postal-code={address.postalCode}
+        country={address.country}
+        onchange={handleAddressChange1} required="true"
+    ></lightning-input-address>
+    <div class="sync-checkbox">
+        <input type="checkbox" id="syncAddress" onchange={handleSyncAddressChange} />
+        <label for="syncAddress">use the same information as "Move to address"</label>
+    </div>
+    <lightning-input-address
+    street-label="Street address" city-label="City" province-label="Province" postal-code-label="Postal code" country-label="Country"
+    street={address2.street}
+    city={address2.city}
+    province={address2.state}
+    postal-code={address2.postalCode}
+    country={address2.country}
+    onchange={handleAddressChange2}
+    required="true"
+></lightning-input-address>
+
+</template>

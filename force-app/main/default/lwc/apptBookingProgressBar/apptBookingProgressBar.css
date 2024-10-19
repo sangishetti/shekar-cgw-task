@@ -1,0 +1,17 @@
+.container{
+    height : 100px;
+}
+.div-container{
+    display:block;
+}
+
+.stage-button{
+    border :0.5px solid #ffffff;
+}
+
+.active-button{
+    background :#332727;
+    border: 0.5px solid #ffffff;
+    color: #ffffff;
+    padding-left: 2px;
+}

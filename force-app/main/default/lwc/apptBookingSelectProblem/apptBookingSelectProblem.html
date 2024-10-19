@@ -1,0 +1,72 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="wrapper">
+        <c-appt-booking-progress-bar stage={stage}></c-appt-booking-progress-bar>
+        <p class="heading-text">How can we help?</p>
+        <hr class="horizontal-line">
+        <div>
+            Problems of the Selected Product.
+            <div class="div-container">
+                <div class="problem-container">
+                    <div class="img-container" onselect={handleIssueSelect}>
+                        <img src={imgUrl} class="img-style">
+                    </div>
+                    <div class="text-container">
+                        <p>Blocked Pipe</p>
+                    </div>
+                </div>
+                <div class="problem-container" onclick={handleIssueSelect}>
+                    <div class="img-container">
+                        <img src={imgUrl} class="img-style">
+                    </div>
+                    <div class="text-container" >
+                        <p>Slow Leak</p>
+                    </div>
+                </div>
+                <div class="problem-container" onclick={handleIssueSelect}>
+                    <div class="img-container">
+                        <img src={imgUrl} class="img-style">
+                    </div>
+                    <div class="text-container">
+                        <p>Faucet Repair</p>
+                    </div>
+                </div>
+                <div class="problem-container" onclick={handleIssueSelect}>
+                    <div class="img-container">
+                        <img src={imgUrl} class="img-style">
+                    </div>
+                    <div class="text-container">
+                        <p>High Velocity Leak</p>
+                    </div>
+                </div>
+                <div class="problem-container" onclick={handleIssueSelect}>
+                    <div class="img-container">
+                        <img src={imgUrl} class="img-style">
+                    </div>
+                    <div class="text-container">
+                        <p>2 or more of the issues listed</p>
+                    </div>
+                </div>
+                <div class="problem-container" onclick={handleIssueSelect}>
+                    <div class="img-container">
+                        <img src={imgUrl} class="img-style">
+                    </div>
+                    <div class="text-container">
+                        <p>{problem}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div-container-input">
+            <p class="input-text">Additional Details</p>
+            <textarea placeholder="Enter more details about the problem" onchange={getAdditionalDetails} class="input-box"></textarea>
+        </div>
+        <div>
+            <!-- <template for:each={problems} for:item={problem}>
+                <div class="flex-div">
+
+                </div>
+            </template> -->
+        </div>
+    </div>
+</template>

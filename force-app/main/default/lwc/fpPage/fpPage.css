@@ -1,0 +1,31 @@
+@import "c/portalStyles";
+
+.container {
+    background-color: #fff;
+}
+
+
+.input-field {
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px;
+    
+}
+
+.reset-button {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #da1b27;
+    height: 44px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: 2px solid #da1b27;
+}
+
+.reset-button:hover {
+    background-color: #a00117;
+}

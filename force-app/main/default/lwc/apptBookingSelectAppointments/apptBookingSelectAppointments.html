@@ -1,0 +1,79 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="wrapper">
+        <c-appt-booking-progress-bar stage="25"></c-appt-booking-progress-bar>
+        <h1 class="heading-text">Select Appointment</h1>
+        <hr class="horizontal-line">
+        <template lwc:if={recommended}>
+            <section>
+                <div>
+                    <h2 class="subheading-text">Next Recommended Appointments</h2>
+                </div>
+                <div class="div-container">
+                    <div class="timeslot-container">
+                        <div class="img-container">
+                            <img src={imgUrl} class="img-style">
+                        </div>
+                        <div>
+                            <p class="p-text1">Tomorrow</p>
+                            <p class="p-text2">April 18</p>
+                            <p class="p-text3">8: 00 AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="timeslot-container">
+                        <div class="img-container">
+                            <img src={imgUrl} class="img-style">
+                        </div>
+                        <div>
+                            <p class="p-text1">Tomorrow</p>
+                            <p class="p-text2">April 18</p>
+                            <p class="p-text3">10: 00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="timeslot-container">
+                        <div class="img-container">
+                            <img src={imgUrl} class="img-style">
+                        </div>
+                        <div>
+                            <p class="p-text1">Tomorrow</p>
+                            <p class="p-text2">April 18</p>
+                            <p class="p-text3">12: 00 PM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button onclick={showDateSelector} class="button-style">See Other Dates</button>
+                </div>
+            </section>
+        </template>
+        <template lwc:else>
+            <div class="flex-Div">
+                <div class="date-div"><p class="subheading-text">Select a Date and Time</p></div>
+                <div class="flex-call-div"><p class="subheading-text">Need help? </p><p class="call-text">Call 1-877-433-2466</p></div>
+            </div>
+            <div>
+                <input type="date" value={selectedDate} onchange={getAvailableSlots} class="date-input">
+            </div>
+            <section lwc:if={showSlots}>
+                <p class="subheading-text">{selectedDate}</p>
+                <div class="time-slots">
+                    <div class="time-slot" onclick={handleSlotSelect}>
+                        <p class="time-slot-container" >8:00 AM - 11:00 PM</p>
+                    </div>
+                    <div class="time-slot">
+                        <p class="time-slot-container">9:00 AM - 12:00 PM</p>
+                    </div>
+                    <div class="time-slot">
+                        <p class="time-slot-container">10:00 AM - 1:00 PM</p>
+                    </div>
+                    <div class="time-slot">
+                        <p class="time-slot-container">10:30 AM - 1:30 PM</p>
+                    </div>
+                    <div class="time-slot">
+                        <p class="time-slot-container">11:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </section>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,24 @@
+<apex:page showHeader="false" sidebar="false">
+   <style>
+      body button, body .x-btn, body .btn, body .btnDisabled, body .btnCancel, body .menuButton .menuButtonButton {
+         border: unset !important;
+         border-bottom-color: unset;
+         background: unset;
+         font-size: unset;
+      }
+   </style>
+   <apex:includeLightning />
+   <div id="LightningComponentid" />
+   <script>
+      console.log('entering in VF page');
+      $Lightning.use("c:HelloLWCExampleApp", function () {
+         console.log('entered page');
+         $Lightning.createComponent("c:helloComponentForVFLWC",
+            {},
+            "LightningComponentid",
+            function (cmp) {
+               console.log('LWC Componenet added in VF page');
+            });
+      });
+   </script>
+</apex:page>

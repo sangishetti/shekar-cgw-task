@@ -1,0 +1,4 @@
+<aura:component >
+	 <lightning:container src="{! 'c:PassStrengthChecker' }" />
+   
+</aura:component>

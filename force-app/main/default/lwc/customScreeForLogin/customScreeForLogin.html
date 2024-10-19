@@ -1,0 +1,97 @@
+<template>
+    <template if:true={firstScreen}>
+    <div class="main-container slds-align_absolute-center">
+        <div class="slds-grid slds-gutters mobilestyling">
+            <div class="slds-col child-container">
+                <div class="slds-align_absolute-center slds-p-top_large">
+                    <img src={imageUrl} alt="Logo" />
+                </div>
+                <div class="slds-align_absolute-center slds-p-top_large">
+                    <h2 class="heading">Login</h2>
+                </div>
+                <div class="custom-input-container1">
+                    <lightning-input type="email" value={email} placeholder="Email address" onchange={handleEmailChange}
+                        class="custom-input"></lightning-input>
+                    <p if:true={usernameField} class="slds-text-color_error Emailerror">{Accountemailaddress}</p>
+                </div>
+                <div class="custom-input-container2">
+                    <lightning-input type={passwordInputType} data-id="username" value={password} placeholder="Password"
+                        onchange={handlePasswordChange} ></lightning-input>
+                    <button class="slds-button slds-button_icon eye-icon" onclick={togglePasswordVisibility}>
+                        <lightning-icon icon-name={eyeIcon} size="x-small"
+                            alternative-text="Toggle Password Visibility"></lightning-icon>
+                    </button>
+                    <p if:true={passwordField} class="slds-text-color_error Passworderror">{Accountpassword}</p>
+                    <p if:true={showError} class="slds-text-color_error">{errorMsg}</p>
+                    <p if:true={showErroridentification} class="slds-text-color_error">{errorMsgidentification}</p>
+                </div>
+                <div class="forgot-password">
+                    <a href={forgotpasswordhrefLabel} class="forgot-password-text">{ForgotpasswordtextLabel}</a>
+                </div>
+                <div class="button-container">
+                    <button class="login" type="submit" onclick={handleClick}>{Signin}</button>
+                </div>
+                <div class="conditions">
+                    <span>{Bysigninginto} </span>
+                    <span> <a href={tclink} class="terms-and-conditions">&nbsp;{TandCText}</a></span>
+                </div>
+                <div class="new-to-myaccount">
+                    <div class="account-container">
+                        <p class="Account">{NewtoMyAccount}</p>
+                        <p> <a href={SelfRegisterlink} class="slds-float_right register">{Registernow}</a></p>
+                    </div>
+                    <span></span>
+
+                </div>
+            </div>
+
+
+            <div class="slds-col child-container2">
+                <div class="slds-p-around_medium slds-p-top_large">
+                    <div>
+                        <h1 class="why-myaccount">{WhyMyAccount}</h1>
+                    </div>
+                    <div>
+                        <h1 class="you-canuse">{WhyMyAccountText}</h1>
+                    </div>
+                </div>
+                <div class="view-main">
+                    <div>
+                        <lightning-icon icon-name="utility:check" size="xx-small" class="view-image"> </lightning-icon>
+                        <span class="view-text">{ViewEnercarebill}</span>
+                    </div>
+                </div>
+                <div class="book-main">
+                    <div>
+                        <lightning-icon icon-name="utility:check" size="xx-small" class="book-image"> </lightning-icon>
+                        <span class="book-text">{Bookappointments}</span>
+                    </div>
+                </div>
+                <div class="product-main">
+                    <div>
+                        <lightning-icon icon-name="utility:check" size="xx-small" class="product-image">
+                        </lightning-icon>
+                        <span class="product-text">{Viewproducts}</span>
+                    </div>
+                </div>
+                <div class="moving-main">
+                    <div>
+                        <lightning-icon icon-name="utility:check" size="xx-small" class="moving-image">
+                        </lightning-icon>
+                        <span class="moving-text">{movingtext}</span>
+                    </div>
+                </div>
+                <div class="see-all">
+                    <a href={Seefulllist} class="see-all-link">{Seethefulllist}</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </template>
+    <template if:true={secondScreen}>
+        <c-registration-terms-and-conditions onlogin={handleAgreeTerms}></c-registration-terms-and-conditions>
+        
+    </template>
+</template>

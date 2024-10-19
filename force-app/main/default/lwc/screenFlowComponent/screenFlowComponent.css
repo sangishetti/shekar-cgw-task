@@ -1,0 +1,73 @@
+.checkbox-container {
+    display: flex;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+
+.checkbox input[type='checkbox']:checked {
+    background-color: #0070d2;
+    border-color: #0070d2;
+}
+
+.checkbox input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    user-select: none;
+}
+
+.address-container {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.address-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-label {
+    font-size: 14px;
+}
+
+.required-asterisk {
+    color: red;
+    margin-left: 5px;
+}
+
+.sync-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sync-checkbox input[type='checkbox'] {
+    margin-right: 10px;
+}

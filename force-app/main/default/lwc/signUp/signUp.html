@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Register My Account">
+        <div class="slds-m-around_medium">
+            <p>Please provide the following details.</p>
+            <lightning-input label="Email Address" value={email} onchange={handleEmailChange}></lightning-input>
+            <lightning-input label="Confirm Email Address" value={confirmEmail} onchange={handleConfirmEmailChange}></lightning-input>
+            <lightning-input label="First Name" value={firstName} onchange={handleFirstNameChange}></lightning-input>
+            <lightning-input label="Last Name" value={lastName} onchange={handleLastNameChange}></lightning-input>
+            <lightning-input label="Street #" value={streetNumber} onchange={handleStreetNumberChange}></lightning-input>
+            <lightning-input label="Street Name" value={streetName} onchange={handleStreetNameChange}></lightning-input>
+            <lightning-input label="Postal Code" value={postalCode} onchange={handlePostalCodeChange}></lightning-input>
+            <lightning-input label="Mobile Number" value={mobileNumber} onchange={handleMobileNumberChange}></lightning-input>
+            <lightning-button label="Submit" onclick={handleSubmit} variant="brand"></lightning-button>
+            <lightning-button label="Back" onclick={handleBack} variant="neutral"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

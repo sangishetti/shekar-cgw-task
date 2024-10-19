@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Register My Account" variant="narrow">
+        <div class="slds-p-around_medium">
+            <p>Please provide the following information. You can find your account number on your latest bill.</p>
+            <lightning-input label="Account number" value={accountNumber} onchange={handleAccountNumberChange} required></lightning-input>
+            <lightning-input label="Postal code" value={postalCode} onchange={handlePostalCodeChange} required></lightning-input>
+            <lightning-input label="Email address" type="email" value={emailAddress} onchange={handleEmailAddressChange} required></lightning-input>
+            <div class="slds-m-top_medium">
+                <lightning-button label="Submit" onclick={handleSubmit} variant="brand"></lightning-button>
+                <lightning-button label="Back" onclick={handleBack} variant="neutral"></lightning-button>
+            </div>
+            <template if:true={error}>
+                <p class="slds-text-color_error">{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

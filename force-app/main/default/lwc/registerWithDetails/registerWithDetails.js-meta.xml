@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="emailAddress" type="String" label="emailAddress"/>
+            <property name="firstName" type="String" label="firstName"/>
+            <property name="lastName" type="String" label="lastName"/>
+            <property name="unitNumber" type="String" label="unitNumber"/>
+            <property name="phoneNumber" type="String" label="phoneNumber"/>
+            <property name="address" type="String" label="address"/>    
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

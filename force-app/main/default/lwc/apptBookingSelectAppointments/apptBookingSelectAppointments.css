@@ -1,0 +1,128 @@
+.wrapper{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 36px; 
+}
+.div-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.timeslot-container{
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    border: 1px solid;
+    background-color: #ebebe5f5;
+    border-radius: 5px;
+    border-color: #ebebe5f5;
+    padding: 5px;
+}
+.img-container{
+    padding: 10px;
+}
+.heading-text{
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+}
+.subheading-text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+.horizontal-line{
+    margin: 2px;
+}
+.img-style{
+    height: 25px;
+    width: 20px;
+}
+.p-text1{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+.p-text2{
+    font-size: 18px;
+    font-weight: 600;
+    color: #416899;
+}
+.p-text3{
+    font-size: 12px;
+    font-weight: 200;
+    color: #000000;
+}
+.button-style {
+    display: flex;
+    width: 215px;
+    height: 50px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFF;
+    text-align: center;
+
+    border-radius: 50px;
+    background: #DA1B27;
+    border-color: #DA1B27;
+    /* Body Subtitle/Bold */
+    font-family: Post Grotesk, Arial;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px; /* 166.667% */
+}
+.call-text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #DA1B27;
+    padding-left: 10px;
+}
+.flex-Div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.date-div{
+    width: 35%;
+    padding: 5px;
+}
+.flex-call-div{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    padding: 5px;
+}
+.date-input{
+    width: 20%;
+}
+.time-slots{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.time-slot{
+    padding: 5px;
+    width: 25%;
+
+}
+.time-slot-container{
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+
+    border-radius: 5px;
+    border: 0.5px solid;
+    border-color: #dbe2e2;
+}
+.time-slot-container:hover{
+    cursor: pointer;
+}

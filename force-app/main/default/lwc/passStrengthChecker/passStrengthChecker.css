@@ -1,0 +1,55 @@
+/* @import 'c/portalStyles'; */
+
+h2, p {
+    font-family: Post Grotesk, Arial;
+    font-size: 14px;
+}
+
+p {
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+.tip-container {
+    margin-bottom: -7px;
+}
+
+.password-checker-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: var(--Enercare-Light-Blue, #C6E3F4);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.16);
+}
+
+.default {
+    color: #000000;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.match-indicator {
+    height: 10px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: gray;
+    transition: background-color 0.3s;
+}
+
+.match-indicator.match {
+    background-color: green;
+}
+
+.match-indicator.no-match {
+    background-color: red;
+}

@@ -1,0 +1,18 @@
+<template>
+    <div class="container">
+        <div class="logo">
+            <img src={imageUrl} alt="Logo" />
+        </div>
+        <h2>Verification link sent</h2>
+        <p class="validate-text">Please validate your email by clicking on the link we sent to the email below</p>
+        <div class="input-container">
+            <input type="email" value={email} disabled />
+        </div>
+         <button class="go-back-button" onclick={handleGoBack}>Go back</button>
+        <!-- <p class="didnt-receive-an">
+            Didn't receive an email?
+        </p>
+        <a href="#" onclick={handleResend} class="resend-link">Resend</a> --> 
+        
+    </div>
+</template>

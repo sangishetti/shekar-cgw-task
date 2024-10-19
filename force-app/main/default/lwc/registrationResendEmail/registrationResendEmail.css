@@ -1,0 +1,94 @@
+.container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+ }
+ .logo img {
+    width: 60%;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    /* height: 57px; */
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-bottom: 2rem;
+ }
+ h2 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-size: 24px;
+    display: flex;
+    font-family: 'Post Grotesk';
+    font-weight: bold;
+    color: #181818;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+ }
+ .validate-text {
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: Arial;
+    color: #646469;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1rem;
+ }
+ .input-container {
+    width: 100%;
+    position: relative;
+    height: 40px;
+    text-align: left;
+    font-size: 16px;
+    color: #747474;
+    font-family: Arial;
+ }
+ input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+ }
+ .go-back-button {
+   width: 100%;
+   position: relative;
+   border-radius: 8px;
+   background-color: #fff;
+   height: 44px;
+   text-align: center;
+   font-size: 16px;
+   color: #da1b27;
+   font-family: Arial, sans-serif;
+   font-weight: bold;
+   border: 2px solid #da1b27;
+ }
+ .didnt-receive-an {
+   width: 100%;
+   position: relative;
+   font-size: 16px;
+   line-height: 28px;
+   font-family: Arial;
+   color: #000;
+   text-align: center;
+   display: inline-block;
+   margin-top: 1rem;
+}
+    
+ .resend-link {
+    position: relative;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: Arial;
+    color: #2963c9;
+    text-align: center;
+ }
+ .resend-link:hover {
+    text-decoration: none;
+ }

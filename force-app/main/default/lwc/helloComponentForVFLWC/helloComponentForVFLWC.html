@@ -1,0 +1,43 @@
+<template>
+    <div class="container">
+        <div class="slds-align_absolute-center slds-p-top_large EClogo">
+            <img src={imageUrl} alt="Logo" />
+        </div>
+        <div class="h2-heading">
+        <h2 class="heading">Set your password</h2>
+        </div>
+        <div class="p-info-text">
+        <p class="info-text">  Protect your account with a strong password. </p>
+    </div>
+        <div class="password">
+            <lightning-input type={passwordInputType} data-id="password" value={password} placeholder="Password" onchange={handleInput} onfocus={handlePasswordFocus} onblur={handlePasswordBlur} ></lightning-input>
+            <button class="slds-button slds-button_icon eye-icon" onclick={togglePasswordVisibility}>
+                <lightning-icon icon-name={eyeIcon} size="x-small" alternative-text="Toggle Password Visibility"></lightning-icon>
+            </button>
+            <template if:true={isPasswordTyped}>
+                <c-pass-strength-checker password={password}></c-pass-strength-checker>
+            </template>
+            
+        </div>
+        <div class="confirm-password">
+        <!-- <lightning-input  type="password"  placeholder="Confirm password" value={confirmPassword} onchange={handleConfirmPasswordChange} ></lightning-input> -->
+        <!-- <button class="slds-button slds-button_icon eye-icon" onclick={togglePasswordVisibility}>
+            <lightning-icon icon-name={eyeIcon} size="x-small" alternative-text="Toggle Password Visibility"></lightning-icon>
+        </button> -->
+        <lightning-input type={confirmPasswordInputType} data-id="confirmPassword" value={confirmPassword} placeholder="Confirm password" onchange={handleConfirmPasswordChange} onfocus={handleConfirmPasswordFocus} onblur={handleConfirmPasswordBlur} oninput={handleInput}></lightning-input>
+        <template if:true={isConfirmPasswordTyped}>
+            <c-pass-strength-checker password={confirmPassword}></c-pass-strength-checker>
+        </template>
+            <button class="slds-button slds-button_icon eye-icon" onclick={toggleConfirmPasswordVisibility}>
+                <lightning-icon icon-name={eyeIcon} size="x-small" alternative-text="Toggle Password Visibility"></lightning-icon>
+            </button>
+        </div>
+        <template if:true={showMessage}>
+            <div class="message-container">
+                <lightning-icon icon-name={iconName} size="small" class={iconClass}></lightning-icon>
+                <span class={messageClass}>{message}</span>
+            </div>
+        </template>
+        <button type="button" class="submit-button"  onclick={handleSubmit}>submit</button>
+    </div>
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-p-around_medium container">
+        <div class="slds-align_absolute-center slds-m-bottom_medium">
+            <img src={imageUrl} alt="Enercare Logo" class="logo" />
+        </div>
+        <h2 class="slds-text-heading_small slds-align_absolute-center"> My Account Registration</h2>
+       <!-- <lightning-input  placeholder="Clarify Id"  value={clarifyId}
+            onchange={handleClarifyChange} disabled></lightning-input>
+         <lightning-icon icon-name="utility:info_alt" alternative-text="Info" size="x-small" onclick={handleInfoClickAccount}
+            class="info-icon"></lightning-icon> -->
+            <div class="email-address">
+                <lightning-input type="email" value={email} label="Email address" disabled></lightning-input>
+            </div>
+            <div if:true={showresetpassword}>
+                <span class="checkbox-text">Please use <a href="#" class="terms-link" target="_blank">forgotpassword</a> to reset password</span>
+            </div>
+            <div if:false={showresetpassword}>
+                {Error1}
+            </div>
+            <div>
+                {SuccessMessage}
+            </div>
+            <p class="email-info">
+              Email could take up to 1-2 minutes to arrive. If you don't see it, please check your spam.
+            </p>
+          
+</div> 
+
+</template>

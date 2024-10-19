@@ -1,0 +1,90 @@
+<template>
+    <div class="slds-p-around_medium container">
+        <div class="slds-align_absolute-center slds-m-bottom_medium">
+            <img src={imageUrl} alt="Enercare Logo" class="logo" />
+        </div>
+        <h2 class="slds-text-heading_small slds-align_absolute-center">Register for My Account</h2>
+        <p class="slds-align_absolute-center Provide">Please provide your Enercare account number and postal code.</p>
+        <div class="slds-align_absolute-center link">
+            <a href="#" class="full-list">Where can I find my account number?</a>
+        </div>
+        <lightning-input  data-id="firstName" placeholder="First Name"  value={firstName} 
+            onchange={handleChangeValue} ></lightning-input>
+     
+            <lightning-input data-id="lastName"  placeholder="Last Name"  value={lastName} 
+            onchange={handleChangeValue} ></lightning-input>
+
+            <lightning-input data-id="address"  placeholder="Address"  value={address} 
+            onchange={handleChangeValue} ></lightning-input>
+            <lightning-input data-id="unitNumber" placeholder="Unit number(if applicable)"  value={unitNumber} 
+            onchange={handleChangeValue} ></lightning-input>
+            <lightning-input data-id="phoneNumber" placeholder="Phone Number"  value={phoneNumber} 
+            onchange={handleChangeValue} ></lightning-input>
+               
+        <lightning-input  type="Email" placeholder="Email address"  value={emailAddress} onchange={handleEmailAddressChange}
+            ></lightning-input>
+            <lightning-icon icon-name="utility:info_alt" alternative-text="Info" size="x-small" onclick={handleInfoClickEmail}
+                class="info-icon-email"></lightning-icon>
+                <p if:true={emailField} class="slds-text-color_error">Please enter your email address.</p>
+            <div class="slds-m-top_small label">
+                <label class="checkbox-label">
+                    <input type="checkbox" checked={agreeTerms} onchange={handleInputChange}>
+                    <span class="checkbox-text">I have read and agree to the <a href="#" class="terms-link" target="_blank">Terms and Conditions</a></span>
+                </label>
+            </div>
+            <div if:true={checkLink}>
+                 <span>{Error1} <a href="https://curious-astro-184413-dev-ed.develop.preview.salesforce-experience.com/s/login/ForgotPassword" class="terms-link" target="_blank">forgot password</a></span>
+            </div>
+            <div if:false={checkLink}>
+                {Error1}
+            </div>
+            
+
+            <div class="login-button">
+                <button class="Submit" type="submit" onclick={handleGoNext}  >Submit</button>
+            </div>
+        <div class="not-sure-about-your-account-nu-parent">
+            <div class="not-sure-about">Not sure about your account number?</div>
+
+            <a href="/s/login/SelfRegister" class="register-with-your">Register with your customer details</a>
+        </div>
+        <div class="already-have-an-account-parent">
+            <div class="already-have-an">Already have an account?</div>
+
+            <a href="/s/login" class="sign-in-instead">Sign in instead</a>
+        </div>
+          <!-- Modal -->
+    <div if:true={isModalOpen} class="modal">
+        <div class="modal-content">
+            <span class="close" onclick={handleCloseModal}>&times;</span>
+            <p>Modal content goes here...</p>
+        </div>
+    </div>
+    <!-- Overlay -->
+    <div if:true={isModalOpen} class="overlay"></div>
+    </div>
+
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Header -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCloseModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium">PDF Document</h2>
+                </header>
+                <!-- Modal/Popup Body -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <iframe src={pdfUrl} width="100%" height="600px"></iframe>
+                </div>
+                <!-- Modal/Popup Footer -->
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Close" onclick={handleCloseModal}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

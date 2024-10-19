@@ -1,0 +1,96 @@
+<!-- <template>
+    <lightning-card title="Password and Email Input Container">
+        <div class="slds-form slds-form_stacked">
+            <lightning-input type="email" label="Email" value={email} onchange={handleEmailChange}></lightning-input>
+            <div class="password-input-container">
+                <lightning-input type={passwordInputType} label="Password" value={password} onchange={handlePasswordChange} onfocus={handlePasswordFocus} onblur={handlePasswordBlur}></lightning-input>
+                <button class="slds-button slds-button_icon eye-icon" onclick={togglePasswordVisibility}>
+                    <lightning-icon icon-name={eyeIcon} size="x-small" alternative-text="Toggle Password Visibility"></lightning-icon>
+                </button>
+            </div>
+        </div>
+    </lightning-card>
+</template> -->
+
+<template>
+    <div class="slds-grid slds-gutters ">
+        
+        <div class="slds-col slds-p-left_large Logincontainer1"        >
+            <div class="logo slds-align_absolute-center">
+                <img src={imageUrl} alt="Logo" />
+            </div>
+            <div class="loginpage">
+            <div class="slds-form slds-form_stacked ">
+                <lightning-input type="email"  value={email} placeholder="Email address" onchange={handleEmailChange}></lightning-input>
+                <div class="password-input-container">
+                    <lightning-input type={passwordInputType}  value={password} placeholder="Password" onchange={handlePasswordChange} onfocus={handlePasswordFocus} onblur={handlePasswordBlur}></lightning-input>
+                    <div class="slds-col slds-var-p-top_small">
+                        <a href="/s/login/ForgotPassword" class="forgot-password-text">Forgot your password?</a>
+                    </div>
+                    <button class="slds-button slds-button_icon eye-icon" onclick={togglePasswordVisibility}>
+                        <lightning-icon icon-name={eyeIcon} size="x-small" alternative-text="Toggle Password Visibility"></lightning-icon>
+                    </button>
+                </div>
+            </div>
+            <!-- <div>
+                <p>- At least eight characters</p>
+                <p>- At least one special character</p>
+                <p>- At least one uppercase character</p>
+            </div> -->
+            <div class="login-button">
+                <button class="login" type="submit" onclick={handleClick}>login</button>
+            </div>
+        </div>
+    
+        
+    
+        <div class="by-signing-into-container">
+            <span>By signing into My Account you agree to the </span>
+            <span class="terms-and-conditions">Terms and Conditions</span>
+        </div>
+    
+        <div class="new-to-my-account-parent">
+            <div class="new-to-my">New to My Account?</div>
+            <a href="/s/login/SelfRegister" class="register-now">Register now</a>
+        </div>
+    </div>
+ 
+    <div class="slds-col" style="width: 85%;">
+        <div class="container" >
+        <div class="section">
+            <div class="section-header">Why use My Account?</div>
+            <div class="section-subtitle">You can use Enercare’s My Account customer portal to manage your services, update your billing preferences and schedule service appointments online.</div>
+        </div>
+        <div class="row">
+            <div class="task-icon">
+                <lightning-icon icon-name="utility:check" size="xx-small"></lightning-icon>
+            </div>
+            <div class="content">View and pay your Enercare bill</div>
+        </div>
+        <div class="row">
+            <div class="task-icon">
+                <lightning-icon icon-name="utility:check" size="xx-small"></lightning-icon>
+            </div>
+            <div class="content">Book & manage appointments</div>
+        </div>
+        <div class="row">
+            <div class="task-icon">
+                <lightning-icon icon-name="utility:check" size="xx-small"></lightning-icon>
+            </div>
+            <div class="content">View your products & services</div>
+        </div>
+        <div class="row">
+            <div class="task-icon">
+                <lightning-icon icon-name="utility:check" size="xx-small"></lightning-icon>
+            </div>
+            <div class="content">Let us know if you’re moving</div>
+        </div>
+        <div class="link">
+            <a href="#">See the full list of My Account features</a>
+        </div>
+    </div></div>      
+        <!-- Add more items as needed -->
+    </div>
+ 
+
+</template>

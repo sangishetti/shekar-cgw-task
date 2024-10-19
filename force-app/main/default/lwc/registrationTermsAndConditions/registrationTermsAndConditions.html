@@ -1,0 +1,18 @@
+<template>
+    <div class="container">
+        <div class="logo">
+            <img src={imageUrl} alt="Logo" />
+        </div>
+        <h2>Terms and Conditions</h2>
+        <p class="Agree-text">Please read and agree to the My Account Terms and Conditions, which govern your use of the My Account Portal.</p>
+        <div class="slds-m-top_small label">
+            <label class="checkbox-label">
+                <input type="checkbox" checked={agreeTerms} onchange={handleInputChange}>
+                <span class="checkbox-text">I have read and agree to the <a href="#" class="terms-link" target="_blank">Terms and Conditions</a></span>
+            </label>
+        </div>
+        <div class="C-button">
+            <button class="Continue-button" onclick={handleContinue}>Continue</button>
+        </div>
+    </div>
+</template>

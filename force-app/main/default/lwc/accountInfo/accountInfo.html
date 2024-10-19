@@ -1,0 +1,97 @@
+<template>
+    <div class="wrapper">
+        <section class="account-section">
+            <div class="account-details">
+                <h2 class="Account-heading">Account</h2>
+                <hr />
+                <div class="contact-details">
+                    <p class="contact-name">{contactName}</p>
+                    <div class="button-container">
+                        <button class="Sign-out" type="submit" onclick={handleSignOut}>Log Out</button>
+                    </div>
+                    <p class="changepassword"><a href="javascript:void(0);" onclick={openModal}><img width="10"
+                                src={imageUrl} alt="Logo">&nbsp;Change Your Password</a></p>
+                    <template if:true={showModal}>
+                        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+                            <div class="slds-modal__container">
+                                <header class="slds-modal__header">
+                                    <h2 id="modal-heading-01" class=" header slds-text-heading_medium slds-hyphenate">{header}</h2>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="close-button" onclick={handleClose}>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 12.6999L22 6.1499C22.3 5.8499 22.3 5.3999 22 5.0999L21 4.0499C20.7 3.7499 20.25 3.7499 19.95 4.0499L13.4 10.5999C13.2 10.7999 12.9 10.7999 12.7 10.5999L6.15002 3.9999C5.85002 3.6999 5.40002 3.6999 5.10002 3.9999L4.05002 5.0499C3.75002 5.3499 3.75002 5.7999 4.05002 6.0999L10.6 12.6499C10.8 12.8499 10.8 13.1499 10.6 13.3499L4.00002 19.9499C3.70002 20.2499 3.70002 20.6999 4.00002 20.9999L5.05002 22.0499C5.35002 22.3499 5.80002 22.3499 6.10002 22.0499L12.65 15.4999C12.85 15.2999 13.15 15.2999 13.35 15.4999L19.9 22.0499C20.2 22.3499 20.65 22.3499 20.95 22.0499L22 20.9999C22.3 20.6999 22.3 20.2499 22 19.9499L15.5 13.3999C15.3 13.1999 15.3 12.8999 15.5 12.6999Z" fill="black"/>
+                                    </svg>
+                                </header>
+                                <!-- Modal/Popup Header -->
+                                <!-- <header class="slds-modal__header">
+                                    <h2 class="slds-text-heading_medium">{header}</h2>
+                                    <button
+                                        class=" closeicon slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                        title="Close" onclick={handleClose}>
+                                        
+                                        <lightning-icon icon-name="utility:close" alternative-text="close"
+                                            size="small"></lightning-icon>
+                                        <span class="slds-assistive-text">Close</span>
+                                    </button>
+                                    
+                                </header> -->
+
+                                <!-- Modal/Popup Body -->
+                                <div class="slds-modal__content slds-p-around_medium">
+                                    <c-change-password onclosechangepasswordmodal={handleClose}></c-change-password>
+                                </div>
+
+                                <!-- Modal/Popup Footer -->
+                                <!-- <footer class="slds-modal__footer">
+                                    <lightning-button variant="neutral" label="Cancel"
+                                        onclick={handleClose}></lightning-button>
+
+                                </footer> -->
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open"></div>
+                    </template>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section">
+            <div class="contact-details">
+                <h2>My Contact Information</h2>
+                <hr />
+                <div class="contact-info">
+                    <div class="info-row">
+                        <lightning-icon icon-name="utility:phone" size="small"></lightning-icon>
+                        <p><img width="35" src={EmailUrl} alt="emailLogo">&nbsp;&nbsp;&nbsp;&nbsp;{contactPhone}</p>
+                    </div>
+                    <div class="info-add">
+                        <lightning-icon icon-name="utility:address" size="small"></lightning-icon>
+                        <p><img width="35" src={HouseUrl} alt="houseLogo">&nbsp;&nbsp;&nbsp;&nbsp;{contactAddress}</p>
+                    </div>
+                    <p class="info-text">If this information is incorrect, please call <a
+                            href="tel:18004333466">1-800-433-3466</a>.</p>
+                    <hr />
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <template if:true={showModalExit}>
+        <section role="dialog" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModalExit}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium">Log out?</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <p>Are you sure you want to log out of your account?</p>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="No" onclick={closeModalExit}></lightning-button>
+                    <lightning-button variant="brand" label="Yes" onclick={handleYes}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

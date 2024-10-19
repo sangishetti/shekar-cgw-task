@@ -1,0 +1,87 @@
+/* @import 'c/portalStyles'; */
+
+.container {
+    width: 382px;
+    height: 636px;
+    padding: 32px 32px 32px 32px;
+    gap: 16px;
+    border-radius: 0px 8px 8px 0px;
+    opacity: 0px;
+    /* background-color: #f8f8f8; */
+
+}
+
+.section {
+    font-family: 'Post Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30.74px;
+    text-align: left;
+}
+
+.section-header{
+    width: 100%;
+    position: relative;
+    font-size: 24px;
+    display: inline-block;
+    font-family: 'Post Grotesk';
+    color: #000;
+    text-align: left;
+}
+.section-subtitle {
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: 'Post Grotesk';
+    color: #181818;
+    text-align: left;
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+    gap: 0px;
+    border-radius: 8px 0px 0px 0px;
+    opacity: 0px;
+    width: 250px;
+    position: relative;
+    background-color: #ffff;
+    height: 36px;
+}
+
+.task-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    /* height: 16px; */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.link {
+    text-align: left;
+    margin-top: 16px;
+}
+
+.link a {
+    /* background-color: rgba(41, 99, 201, 1); */
+    color: rgb(23, 26, 171);
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: left;
+    justify-content: left;
+}
+
+.link a:hover {
+    /* background-color: rgba(31, 79, 181, 1); */
+}

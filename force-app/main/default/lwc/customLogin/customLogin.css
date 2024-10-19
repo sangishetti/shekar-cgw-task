@@ -1,0 +1,290 @@
+/* @import 'c/portalStyles'; */
+
+p {
+    font-family: Post Grotesk, Arial;
+    font-size: 16px;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+.default {
+    color: black;
+}
+
+.slds-form_stacked .slds-form-element:not(.slds-form-element_readonly){
+    margin-bottom: 0px !important;
+}
+.slds-var-p-top_small{
+    padding-top: 8px !important;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+
+.Logincontainer{
+    width:50%;
+    background-color: #fff;
+    text-align: left;
+    min-width: 280px;
+    max-width: 461px;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 27%;
+    display: inline-block;
+    position: relative;
+    font-family: var(--lwc-fontFamily, Lato);
+    font-size: 14px;
+    color: var(--lwc-colorTextDefault, rgba(0, 0, 0, 0.8));
+    text-decoration: none;
+    vertical-align: middle;
+    z-index: 0;
+}
+
+.login{
+    width: 100%;
+    position: relative;
+    border-radius: 50px;
+    background-color: #da1b27;
+    height: 44px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-family: Arial;
+    border-color: #da1b27;
+}
+
+.login-button{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* .loginpage {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* width:480px;  */
+    /* background-image: linear-gradient(to bottom, white, #e6e6e6); */
+    /* height: 100vh;
+  
+    /* height: 370px; */
+  /* }  */
+  
+  .slds-form {
+    width: 100%; /* Adjust the width as needed */
+  }
+  
+  .password-input-container {
+    position: relative;
+  }
+  
+  /* .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 29%;
+    transform: translateY(-50%);
+  } */
+  .register-text{
+    /* margin-top: 20px; */
+    text-align: right;
+    color:rgb(204, 36, 42);
+    justify-content: right;
+    padding-left: 80px;
+  }
+
+  .forgot-password-text{
+    position: relative;
+    /* font-size: 16px; */
+    line-height: 28px;
+    font-family: Arial;
+    color: #2963c9;
+    text-align: left;
+    display: inline-block;
+    padding-left: 8px;
+    
+  }
+
+  .slds-var-p-top_small{
+    padding-top : 0px;
+  }
+  .slds-gutters .slds-col {
+    padding-left: 0px;
+  }
+
+.password-input-container {
+    position: relative;
+}
+
+.eye-icon {
+    size:small;
+    position: absolute;
+    top: 42%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.terms-and-conditions {
+    color: #2963c9;
+}
+.by-signing-into-container {
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Post Grotesk';
+    text-align: center;
+    display: inline-block;
+    color: #000;
+}
+
+.new-to-my {
+    position: relative;
+    line-height: 28px;
+}
+.register-now {
+    position: relative;
+    line-height: 28px;
+    color: #2963c9;
+}
+.new-to-my-account-parent {
+    width: 100%;
+    height: 207px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 65px;
+    box-sizing: border-box;
+    text-align: center;
+    /* font-size: 16px; */
+    color: #646469;
+    font-family: Arial;
+}
+.logo {
+    /* width: 60%; */
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+/* @import 'c/portalStyles'; */
+
+.container {
+    width: 382px;
+    height: 528.5px;
+    padding: 32px 32px 32px 32px;
+    gap: 16px;
+    border-radius: 0px 8px 8px 0px;
+    opacity: 0px;
+    background-color: #f8f8f8;
+    margin-top: 11%;
+    margin-bottom: 5%;
+
+}
+
+.section {
+    font-family: 'Post Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30.74px;
+    text-align: left;
+}
+
+.section-header{
+    width: 100%;
+    position: relative;
+    font-size: 24px;
+    display: inline-block;
+    font-family: 'Post Grotesk';
+    color: #000;
+    text-align: left;
+}
+.section-subtitle {
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: 'Post Grotesk';
+    color: #181818;
+    text-align: left;
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+    gap: 0px;
+    border-radius: 8px 0px 0px 0px;
+    opacity: 0px;
+    width: 250px;
+    position: relative;
+    background-color: #ffff;
+    height: 36px;
+}
+
+.task-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    /* height: 16px; */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.link {
+    text-align: left;
+    margin-top: 16px;
+}
+
+.link a {
+    /* background-color: rgba(41, 99, 201, 1); */
+    color: rgb(23, 26, 171);
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: left;
+    justify-content: left;
+}
+
+.link a:hover {
+    /* background-color: rgba(31, 79, 181, 1); */
+}
+
+.Logincontainer1{
+    width:50%;
+    background-color: #fff;
+    text-align: left;
+    min-width: 280px;
+    max-width: 461px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 27%;
+    display: inline-block;
+    position: relative;
+    font-family: var(--lwc-fontFamily, Lato);
+    font-size: 14px;
+    color: var(--lwc-colorTextDefault, rgba(0, 0, 0, 0.8));
+    text-decoration: none;
+    vertical-align: middle;
+    z-index: 0;
+}

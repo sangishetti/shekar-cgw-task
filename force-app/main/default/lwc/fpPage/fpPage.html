@@ -1,0 +1,10 @@
+<template>
+    <div class="container">
+            <div class="slds-p-around_medium">
+                <lightning-input class="input-field" label="Email address" value={email} onchange={handleUsernameChange}></lightning-input>
+                <!-- <div if:true={isInvalidEmail} class="slds-text-color_error">Please enter a valid email address</div> -->
+                <button type="button" class="reset-button"  onclick={handleResetPassword}>Reset password</button>
+                <div if:true={isUsernameEmpty} class="slds-text-color_error">Please enter your email address</div>
+            </div>
+    </div>
+</template>
