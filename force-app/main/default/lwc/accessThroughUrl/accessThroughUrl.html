@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="User Information">
+        <div class="slds-p-around_medium">
+            <table style="border-collapse: collapse; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">origin_record</td>
+                    <td style="border: 1px solid black; padding: 8px;">{originRecordId}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">account</td>
+                    <td style="border: 1px solid black; padding: 8px;">{accountId}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">invoice_date</td>
+                    <td style="border: 1px solid black; padding: 8px;">{invoiceDate}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">invoice_due_date</td>
+                    <td style="border: 1px solid black; padding: 8px;">{invoiceDueDate}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">child_relationship_name</td>
+                    <td style="border: 1px solid black; padding: 8px;">{childRelationshipName}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">line_item_description</td>
+                    <td style="border: 1px solid black; padding: 8px;">{lineItemDescription}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">line_item_quantity</td>
+                    <td style="border: 1px solid black; padding: 8px;">{lineItemQuantity}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">line_item_unit price</td>
+                    <td style="border: 1px solid black; padding: 8px;">{lineItemUnitPrice}</td>
+                </tr>
+            </table>
+        </div>
+    </lightning-card>
+</template>
