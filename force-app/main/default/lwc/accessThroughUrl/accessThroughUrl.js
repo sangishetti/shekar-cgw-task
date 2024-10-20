@@ -4,6 +4,9 @@ import { CurrentPageReference } from 'lightning/navigation';
 
 
 export default class AccessThroughUrl extends LightningElement {
+    invoiceDetails = false;
+    josnFormat = false;
+    josnFormatDetails;
     originRecordId = '';
     accountId = '';
     invoiceDate = '';
@@ -12,32 +15,29 @@ export default class AccessThroughUrl extends LightningElement {
     lineItemDescription = '';
     lineItemQuantity = '';
     lineItemUnitPrice = '';
+    currentPageApiName;    
+    pageName;
 
-    // connectedCallback() {
-    //      console.log('dfdfdf');
-    //     console.log(URLSearchParams(window.location.search));
-    //     const urlParams = new URLSearchParams(window.location.search);
-    //     alert(urlParams.get('origin_record'));
-    //     console.log('dfdfdf'+ urlParams.get('origin_record'));
+     connectedCallback() {
+        const path = window.location.pathname;
+        const pathParts = path.split('/');
+        if (pathParts.includes('n') || pathParts.includes('r') || pathParts.includes('s')) {
+            this.pageName = pathParts[pathParts.length - 1];        
+        } else {
+            this.pageName = 'Unknown Page';
+        }           
+        if (this.pageName === 'createinvoicepage') {
+            this.invoiceDetails = true;
+        } else if(this.pageName === 'json-page'){
+            this.josnFormat = true;                        
+        }
 
-    //     // Extract parameters from the URL
-    //     this.originRecordId = urlParams.get('origin_record') || 'No Record ID';
-    //     this.accountId = urlParams.get('account') || 'No Account ID';
-    //     this.invoiceDate = urlParams.get('invoice_date') || 'No Invoice Date';
-    //     this.invoiceDueDate = urlParams.get('invoice_due_date') || 'No Invoice Due Date';
-    //     this.childRelationshipName = urlParams.get('child_relationship_name') || 'No Child Relationship Name';
-    //     this.lineItemDescription = urlParams.get('line_item_description') || 'No Description';
-    //     this.lineItemQuantity = urlParams.get('line_item_quantity') || 'No Quantity';
-    //     this.lineItemUnitPrice = urlParams.get('line_item_unit_price') || 'No Unit Price';
-
-    //     //this.createInvoiceRecord();
-    // }
+     }
 
     @wire(CurrentPageReference)
-    getStateParameters(currentPageReference) {
-        if (currentPageReference) {
-            const params = currentPageReference.state;
-            // Assign parameters to component properties
+    getStateParameters(currentPageReference) {                
+        if (currentPageReference) {            
+            const params = currentPageReference.state;            
             this.originRecordId = params.origin_record || '';
             this.accountId = params.account || '';
             this.invoiceDate = params.invoice_date || '';
@@ -45,26 +45,24 @@ export default class AccessThroughUrl extends LightningElement {
             this.childRelationshipName = params.child_relationship_name || '';
             this.lineItemDescription = params.line_item_description || '';
             this.lineItemQuantity = params.line_item_quantity || '';
-            this.lineItemUnitPrice = params.line_item_unit_price || '';
-            alert('-ccccccccccc-'+this.lineItemDescription);
+            this.lineItemUnitPrice = params.line_item_unit_price || '';                                               
+            this.createJsonFormat();
         }
     }
-    // createInvoiceRecord() {
-    //     createInvoice({
-    //         originRecordId: this.originRecordId,
-    //         accountId: this.accountId,
-    //         invoiceDate: this.invoiceDate,
-    //         invoiceDueDate: this.invoiceDueDate,
-    //         childRelationshipName: this.childRelationshipName,
-    //         lineItemDescription: this.lineItemDescription,
-    //         lineItemQuantity: this.lineItemQuantity,
-    //         lineItemUnitPrice: this.lineItemUnitPrice
-    //     })
-    //     .then(result => {
-    //        console.log('reslut' + result);
-    //     })
-    //     .catch(error => {
-    //         console.log('error' + error.body.message);
-    //     });
-    // }
+    
+     createJsonFormat(){
+        const invoiceJson = {
+            origin_record: this.originRecordId,
+            account: this.account,
+            invoice_date: this.invoiceDate,
+            invoice_due_date: this.invoiceDueDate,
+            child_relationship_name: this.childRelationshipName,
+            line_item_description: this.lineItemDescription,
+            line_item_quantity: this.lineItemQuantity,
+            line_item_unit_price: this.lineItemUnitPrice
+        };
+                
+        this.josnFormatDetails = JSON.stringify(invoiceJson);
+        console.log(this.josnFormatDetails)
+     }
 }

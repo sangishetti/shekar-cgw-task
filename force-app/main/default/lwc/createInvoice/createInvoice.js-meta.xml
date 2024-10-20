@@ -3,6 +3,9 @@
     <apiVersion>61.0</apiVersion>
     <isExposed>true</isExposed>
     <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightningCommunity__Page</target>         
+        <target>lightningCommunity__Default</target>
         <target>lightning__AppPage</target>  <!-- Make available for App Pages -->
         <target>lightning__RecordPage</target>  <!-- Make available for Record Pages -->
         <target>lightning__HomePage</target>  <!-- Optionally, make available for Home Pages -->

@@ -1,5 +1,6 @@
 <template>
-    <lightning-card title="User Information">
+    <template if:true={invoiceDetails}>
+    <lightning-card title="Invoice Details">
         <div class="slds-p-around_medium">
             <table style="border-collapse: collapse; width: 100%;">
                 <tr>
@@ -37,4 +38,13 @@
             </table>
         </div>
     </lightning-card>
+</template>
+<template if:true={josnFormat}>
+    <lightning-card title="JSON Details">
+        <div class="slds-p-around_medium">
+            test
+            {josnFormatDetails}
+        </div>
+    </lightning-card>
+</template>
 </template>
