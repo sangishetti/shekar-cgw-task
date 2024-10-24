@@ -1,4 +1,5 @@
 <template>
+    <lightning-button if:true={hidebutton} data-id="invoicePage" label="Create Invoice" onclick={redirectPage}></lightning-button>    
     <template if:true={invoiceDetails}>
     <lightning-card title="Invoice Details">
         <div class="slds-p-around_medium">
@@ -42,7 +43,6 @@
 <template if:true={josnFormat}>
     <lightning-card title="JSON Details">
         <div class="slds-p-around_medium">
-            test
             {josnFormatDetails}
         </div>
     </lightning-card>

@@ -10,4 +10,10 @@
         <target>lightning__RecordPage</target>  <!-- Make available for Record Pages -->
         <target>lightning__HomePage</target>  <!-- Optionally, make available for Home Pages -->
     </targets>
+    <targetConfigs>
+        <!-- Example of configuring properties for Record Pages -->
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" type="String" label="Custom Title" description="A custom title for the component" default="Default Title"/>            
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
